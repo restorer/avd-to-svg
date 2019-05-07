@@ -1,0 +1,9 @@
+{
+    "name": "avd-to-svg",
+    "version": "0.0.0",
+    "description": "Android Vector Drawable to SVG",
+    "main": "index.js",
+    "dependencies": {
+        "xml-js": "^1.6.11"
+    }
+}
