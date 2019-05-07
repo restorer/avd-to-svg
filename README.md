@@ -63,3 +63,7 @@ node <path-to-avd-to-svg>/index.js <source-vector-drawable.xml> <output.svg>
     - `gradientRadius` → `fr`
 
 - `<gradient android:type="sweep">` → **no direct mapping in svg, converted to radialGradient**
+
+## TODO
+
+- [ ] Resource references (eg. `@color/some_color`)
