@@ -364,6 +364,10 @@ function convertVectorDrawableChild(child, context) {
             result.attributes["clip-path"] = `url(#${context.clipPathId})`;
         }
 
+        if (child.name !== null) {
+            result.attributes.id = child.name;
+        }
+
         const translate = [];
 
         if (child.translateX !== null || child.translateY !== null) {
@@ -404,6 +408,10 @@ function convertVectorDrawableChild(child, context) {
 
         if (context.clipPathId !== null) {
             result.attributes["clip-path"] = `url(#${context.clipPathId})`;
+        }
+
+        if (child.name !== null) {
+            result.attributes.id = child.name;
         }
 
         if (child.fillColor !== null) {
