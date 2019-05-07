@@ -1,5 +1,7 @@
 # Android VectorDrawable to SVG
 
+![](https://img.shields.io/github/tag/restorer/avd-to-svg.svg) [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE.txt)
+
 There are several converters for converting vector drawables to svg (I know 3 of them, including ShapeShifter), but no one supports gradients.
 
 This tool tries to support almost everything.
