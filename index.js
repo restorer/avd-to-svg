@@ -263,7 +263,7 @@ function convertVectorDrawableColor(color, alpha, attributes, colorName, opacity
         if (color.endY !== null) {
             result.attributes.y2 = color.endY;
         }
-    } else if (color.type === "radial") {
+    } else if (color.type === "radial" || color.type === "sweep") {
         result.name = "radialGradient";
 
         if (color.centerX !== null) {
@@ -274,12 +274,11 @@ function convertVectorDrawableColor(color, alpha, attributes, colorName, opacity
             result.attributes.cy = color.centerY;
         }
 
-        if (color.gradientRadius !== null) {
+        if (color.type === "radial" && color.gradientRadius !== null) {
             result.attributes.fr = color.gradientRadius;
         }
     } else {
-        // "sweep" is not supported
-        throw new Error(`Unsupported gradient type: ${util.inspect(color)}`);
+        throw new Error(`Unknown gradient type: ${util.inspect(color)}`);
     }
 
     if (color.items.length !== 0) {

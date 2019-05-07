@@ -15,8 +15,8 @@ node <path-to-avd-to-svg>/index.js <source-vector-drawable.xml> <output.svg>
 - `<vector>` → `<svg>`
     - `name` → `id`
     - `viewportWidth`, `viewportHeight` → `width`, `height`, `viewBox`
-    - `alpha` → `...`
-    - `tint`, `tintMode` - **not supported, ignored**
+    - `alpha` → `opacity`
+    - `tint`, `tintMode` → **not supported, ignored**
 
 - `<group>` → `<g>`
     - `name` → `id`
@@ -43,7 +43,7 @@ node <path-to-avd-to-svg>/index.js <source-vector-drawable.xml> <output.svg>
     - `startColor` → `<stop offset="0%" stop-color="..." stop-opacity="...">`
     - `centerColor` → `<stop offset="50%" stop-color="..." stop-opacity="...">`
     - `endColor` → `<stop offset="100%" stop-color="..." stop-opacity="...">`
-    - `tileMode` - **not supported, ignored**
+    - `tileMode` → **not supported, ignored**
 
 - `<item>` inside `<gradient>` → `<stop>`
     - `offset` → `offset`
@@ -60,4 +60,4 @@ node <path-to-avd-to-svg>/index.js <source-vector-drawable.xml> <output.svg>
     - `centerY` → `cy`
     - `gradientRadius` → `fr`
 
-- `<gradient android:type="sweep">` - **not supported, error thrown**
+- `<gradient android:type="sweep">` → **no direct mapping in svg, converted to radialGradient**
