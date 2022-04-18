@@ -301,7 +301,7 @@ function convertVectorDrawableColor(color, alpha, attributes, colorName, opacity
         });
     } else {
         result.elements = [];
-
+        var item = color;
         if (item.startColor !== null) {
             result.elements.push(
                 {
