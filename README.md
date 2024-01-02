@@ -60,7 +60,7 @@ node <path-to-avd-to-svg>/index.js <source-vector-drawable.xml> <output.svg>
 - `<gradient android:type="radial">` → `radialGradient`
     - `centerX` → `cx`
     - `centerY` → `cy`
-    - `gradientRadius` → `fr`
+    - `gradientRadius` → `r`
 
 - `<gradient android:type="sweep">` → **no direct mapping in svg, converted to radialGradient**
 
